@@ -73,5 +73,4 @@ def main():
     else:
         print(f"   ATENCIÓN: No se ha alcanzado el objetivo diario de {objetivo_diario_fl:.2f}€.")
 
-if __name__ == "__main__":
-    main()
+__name__ == "__main__" #!He quitado el: main() de la última línea, (if) y los dos puntos(:) del final
