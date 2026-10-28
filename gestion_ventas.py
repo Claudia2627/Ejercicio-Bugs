@@ -56,8 +56,9 @@ def main():
     objetivo_diario_fl = 400.0
     
     print("\n1. Procesando lista de ventas del día...")
-   
-    total_bruto_fl = fn_ProcesarListaVentas_fl(lista_ventas)
+
+    total_bruto_fl = objetivo_diario_fl * 0.20
+    total_bruto_fl = fn_ProcesarListaVentas_fl(lista_ventas) #!total_bruto no estaba en una variable, he creado una aplicandole el descuento
     print(f"   Total bruto calculado: {total_bruto_fl:.2f}€")
     
     print(f"\n2. Aplicando descuento para cliente de tipo '{tipo_cliente_str}'...")
