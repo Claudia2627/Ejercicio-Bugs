@@ -66,9 +66,9 @@ def main():
     print(f"   Total tras descuento: {total_neto_fl:.2f}€ (Valor esperado para 20% dto: {total_bruto_fl * 0.80:.2f}€)")
     
     print("\n3. Evaluando si se superó el objetivo diario...")
-    exito_bool = fn_EvaluarObjetivoDiario_bool(total_neto_fl, objetivo_diario_fl)
+    exito_fl = fn_EvaluarObjetivoDiario_bool(total_neto_fl, objetivo_diario_fl)
     
-    if exito_bool:
+    if exito_fl < total_bruto_fl:
         print(f"   ¡ÉXITO! Se ha alcanzado el objetivo diario de {objetivo_diario_fl:.2f}€.")
     else:
         print(f"   ATENCIÓN: No se ha alcanzado el objetivo diario de {objetivo_diario_fl:.2f}€.")
