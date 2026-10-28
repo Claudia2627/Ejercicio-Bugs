@@ -14,7 +14,7 @@ def fn_CalcularDescuento_fl(precio_total_fl, tipo_cliente_str):
     """
 
     if tipo_cliente_str == "VIP":
-        precio_final_fl = precio_total_fl * 0.20
+        precio_final_fl = precio_total_fl * 0.80
     elif tipo_cliente_str == "HABITUAL":
         precio_final_fl = precio_total_fl * 0.90
     else:
@@ -58,7 +58,7 @@ def main():
     print("\n1. Procesando lista de ventas del día...")
 
     total_bruto_fl = objetivo_diario_fl * 0.20
-    total_bruto_fl = fn_ProcesarListaVentas_fl(lista_ventas) #!total_bruto no estaba en una variable, he creado una aplicandole el descuento
+    total_bruto_fl = fn_ProcesarListaVentas_fl(lista_ventas) #!total_bruto no estaba en una variable, he creado una aplicandole el
     print(f"   Total bruto calculado: {total_bruto_fl:.2f}€")
     
     print(f"\n2. Aplicando descuento para cliente de tipo '{tipo_cliente_str}'...")
@@ -73,4 +73,5 @@ def main():
     else:
         print(f"   ATENCIÓN: No se ha alcanzado el objetivo diario de {objetivo_diario_fl:.2f}€.")
 
-__name__ == "__main__" #!He quitado el: main() de la última línea, (if) y los dos puntos(:) del final
+if __name__ == "__main__":
+    main()
