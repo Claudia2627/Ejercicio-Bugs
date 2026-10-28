@@ -31,6 +31,7 @@ def fn_ProcesarListaVentas_fl(ventas_lst):
     
     while i < len(ventas_lst):
         total_fl += ventas_lst[i]
+        i = i + 1 #! ARREGLADO BUG NO SUMA EL INDICE Y SE QUEDA BLOQUEADO
 
     return total_fl
 
